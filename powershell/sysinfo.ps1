@@ -2,12 +2,9 @@
     (Get-NetIPAddress).ipv4address | Select-String "192*"
 }
 
-function getUser{
-    (whoami)
-}
 
 $IP=getIP
-$getuser=getUser
+$getuser=$env:USERNAME
 $gethostname=$env:COMPUTERNAME
 $getDate=Get-Date -UFormat "%A, %B %e, %Y"
 $Psversion=$Host.Version.Major
