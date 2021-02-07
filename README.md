@@ -3,7 +3,8 @@
 My App
 ======
 
-#This is my app
+#This is the main branch for Scripting Languages
+
 
 ```javascript
 Javascript code block to highlight what's up in my code
