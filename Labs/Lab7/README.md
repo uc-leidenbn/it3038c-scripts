@@ -34,3 +34,5 @@ Get-AzureADUserManager -ObjectID "$userprincipalname"
 Get-AzureADUserLicenseDetail -ObjectID "$userprincipalname"
 ```
 The output of the script will contain various detailed information about the parameters we called for in the commands above. 
+
+Note: Each time the script is run, signing in to AzureAD is required. 
