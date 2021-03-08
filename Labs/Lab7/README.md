@@ -3,6 +3,13 @@
 AzureAD User Information
 ======
 
+Before running this script, we must install the necessary module, which is called the "Azure Active Directory PowerShell for Graph module."
+
+In an administrative powershell window, run the following: 
+```powershell
+Install-Module -Name AzureAD
+```
+
 This script gathers basic information from a user in an AzureAD tenant.
 
 First, define the UPN variable (userprincipalname) in the script you wish to get details from.
