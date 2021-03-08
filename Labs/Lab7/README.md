@@ -1,10 +1,19 @@
-# it3038c-scripts
+# Lab7 ReadME
 
-My App
+AzureAD User Information
 ======
 
-#This is the main branch for Scripting Languages
+#This script gathers basic information from a user in an AzureAD tenant.
 
+#First, define the UPN (userprincipalname) you wish to get details from.
 
 ```javascript
-Javascript code block to highlight what's up in my code
+$userprincipalname = 'username@domain.com'
+
+#Second, we will want to connect to our AzureAD Tenant using a properly authorized account. Run the following command & enter the account information you wish to use. 
+
+```javascript
+Connect-AzureAD
+
+#After successfully signing in, the rest of the script will run as follows: 
+
