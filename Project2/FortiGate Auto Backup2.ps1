@@ -3,7 +3,7 @@
 #mailto: licensing@gigabition.com
 #Unauthorized Use, Sale, or Distribution is prohibited.
 
-#Developed using FortiGate 100E running FortiOS 6.4.3.
+#Developed using FortiGate 100E running FortiOS 6.4.3 and FortiGate 60E running FortiOS 6.4.2.
 #Create Basic Task in TaskScheduler for regular operations. 
 
 #This script allows for the automated download and dating of Fortinet FortiGate Config Files. 
