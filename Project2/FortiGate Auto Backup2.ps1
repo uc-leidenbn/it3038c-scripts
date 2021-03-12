@@ -3,7 +3,7 @@
 #mailto: licensing@gigabition.com
 #Unauthorized Use, Sale, or Distribution is prohibited.
 
-#Developed using FortiGate 100E running FortiOS 6.4.3 and FortiGate 60E running FortiOS 6.4.2.
+#Developed using FortiGate 100E running FortiOS 6.4.3.
 #Create Basic Task in TaskScheduler for regular operations. 
 
 #This script allows for the automated download and dating of Fortinet FortiGate Config Files. 
@@ -25,25 +25,25 @@ $Fgts = "X:\Fortinet\FortiGates.txt"
 #References list of IP addresses of FortiGates. 
 
 
-ForEach ($file in (Get-Content "$Fgts")) {
+ForEach ($fgt in (Get-Content "$Fgts")) {
 
-Write-Host "Processing FortiGate: $file "
+Write-Host "Processing FortiGate: $fgt "
 #Allows operator to see which Firewall is being processed. 
 
-New-Item $BackupPath\$Date\$file -type directory
+New-Item $BackupPath\$Date\$fgt -type directory
 #Creates new directory for the backup. 
 
-pscp -i X:\Fortinet\FortiPrivate.ppk “admin@$($file):sys_config” $BackupPath\$Date\$file\
+pscp -i X:\Fortinet\FortiPrivate.ppk “admin@$($fgt):sys_config” $BackupPath\$Date\$fgt\
 #Uses SCP to pull sys_config.conf file from the FortiGate using a private/public key pair.  
 #-i signals the SSH Private Key. 
 
-Rename-Item -Path "$BackupPath\$Date\$file\sys_config" -NewName "sys_config.conf"
+Rename-Item -Path "$BackupPath\$Date\$fgt\sys_config" -NewName "sys_config.conf"
 #Adds file extension to allow file to be opened in a text editor.
 
 }
-#This ForEach Section processes the file line by line and sets the $file variable to the current line. 
+#This ForEach Section processes the file line by line and sets the $fgt variable to the current line. 
 
-#Results: https://mailuc-my.sharepoint.com/:f:/g/personal/leidenbn_mail_uc_edu/EnCM_A8nLfVCv0digq09yscBaMnoVkT13_y_sVi3NjqOuQ?e=Y0hKaR
+#Results: https://mailuc-my.sharepoint.com/:v:/g/personal/leidenbn_mail_uc_edu/EavuIG2ZKKpGl2-nTemkm0ABblgxTl-z--RQhEgfd-mswg?e=FNwIam
 
 #References
 #https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-7.1
