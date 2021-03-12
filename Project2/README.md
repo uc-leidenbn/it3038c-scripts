@@ -1,6 +1,6 @@
-# Lab7 ReadME
+# Project 2
 
-AzureAD User Information
+FortiGate AutoBackup v2.1
 ======
 
 Before running this script, we must install the necessary module, which is called the "Azure Active Directory PowerShell for Graph module."
