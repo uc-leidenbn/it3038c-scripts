@@ -81,4 +81,5 @@ https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.manageme
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.1
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content?view=powershell-7.1&viewFallbackFrom=powershell-6
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.1
+https://stackoverflow.com/questions/4753702/automatic-confirmation-of-deletion-in-powershell
 
